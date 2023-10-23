@@ -6,4 +6,4 @@ export const loadCoffeesSuccess = createAction('[Coffee] Load Coffees Success', 
 export const loadCoffeesFailure = createAction('[Coffee] Load Coffees Failure', props<{ error: string }>());
 export const addCoffee = createAction('[Coffee] Add Coffee', props<{ coffee: Coffee }>());
 export const updateCoffee = createAction('[Coffee] Update Coffee', props<{ coffee: Coffee }>());
-export const deleteCoffee = createAction('[Coffee] Delete Coffee', props<{ id: string }>());
+export const deleteCoffee = createAction('[Coffee] Delete Coffee', props<{ id: number }>());
