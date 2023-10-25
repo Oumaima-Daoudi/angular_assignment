@@ -5,10 +5,13 @@ import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from "@ngrx/store";
+import { MatPaginatorModule } from "@angular/material/paginator";
 
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   declarations: [
@@ -22,9 +25,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     FlexLayoutModule,
     HttpClientModule,
-    StoreModule
+    MatPaginatorModule
+    /* StoreModule.forRoot(coffeeReducer),
+    StoreModule.forFeature('coffee', coffeeReducer) */
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,4 @@
-import { CoffeeEffects } from "./effects";
+/* import { CoffeeEffects } from "./effects";
 import { CoffeeState, coffeeReducer } from "./reducers";
 import { ActionReducer, Action } from "@ngrx/store";
 
@@ -15,3 +15,4 @@ export const appStore: AppStore = {
 }
 
 export const appEffects = [CoffeeEffects];
+ */

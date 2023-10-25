@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, forkJoin } from 'rxjs';
 import { Coffee } from './coffee.model';
 
 @Injectable({
@@ -11,7 +11,16 @@ export class CoffeeService {
 
   constructor(private http: HttpClient) {}
 
-  getAllCoffees(): Observable<Coffee[]> {
-    return this.http.get<Coffee[]>(this.apiEndpoint);
+  getAllCoffees(count: number,page: number, pageSize: number): Observable<Coffee[]> {
+    const params = {
+      page: page.toString(),
+      pageSize: pageSize.toString()
+    };
+    const requests: Observable<Coffee>[] = [];
+    for (let i = 0; i < count; i++) {
+      requests.push(this.http.get<Coffee>(this.apiEndpoint, { params }));
+    }
+    return forkJoin(requests);
   }
+
 }

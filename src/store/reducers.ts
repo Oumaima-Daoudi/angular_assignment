@@ -1,4 +1,4 @@
-
+/*
 import { Coffee } from "./coffee.model";
 import {on, createReducer} from "@ngrx/store"
 import * as CoffeeActions from "./actions";
@@ -28,3 +28,4 @@ on(CoffeeActions.updateCoffee, (state, { coffee }) => ({ ...state, coffees: stat
 
 on(CoffeeActions.deleteCoffee, (state, { id }) => ({ ...state, coffees: state.coffees.filter(t => t.id !== id) })),
 );
+ */

@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+/* import { Injectable } from "@angular/core";
 import { createEffect } from "@ngrx/effects";
 import { ofType } from "@ngrx/effects";
 import * as CoffeeActions from "./actions";
@@ -8,7 +8,9 @@ import { of } from "rxjs";
 import { catchError, map, mergeMap } from "rxjs/operators";
 
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class CoffeeEffects {
 
   loadCoffees$ = createEffect(() =>
@@ -26,3 +28,4 @@ export class CoffeeEffects {
   );
   constructor(private actions$: Actions, private coffeeService: CoffeeService) {}
 }
+ */
