@@ -1,26 +1,42 @@
+<h1 class="d-flex title justify-content-center">Product List</h1>
 <div>
-  <h1 class="d-flex title justify-content-center">Product List</h1>
-  <div class="content">
-    <div fxLayout="row wrap" fxlayoutGap="16px grid">
-      <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let item of randomData; let i = index">
-        <mat-card class="example-card" style="margin: 16px;"  *ngIf="i >= (currentPage - 1) * itemsPerPage && i < currentPage * itemsPerPage">
-          <mat-card-header>
-            <mat-card-title> {{item.intensifier}}</mat-card-title>
-          </mat-card-header>
-          <img
-            mat-card-image
-            src="https://i.pinimg.com/474x/50/f1/7c/50f17c380525acf16c5ad8df185b1554.jpg"
-            alt="Photo of a Shiba Inu"
-          />
-          <mat-card-content>
-            <p>{{ item.blend_name}}</p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button>{{item.variety}}</button>
-          </mat-card-actions>
-        </mat-card>
+  <ng-container *ngIf="isLoading; else content">
+    <app-skeleton></app-skeleton>
+  </ng-container>
+
+  <ng-template #content>
+    <div class="content">
+      <div fxLayout="row wrap" fxlayoutGap="16px grid">
+        <div
+          fxFlex="20%"
+          fxFlex.xs="100%"
+          fxFlex.sm="33%"
+          *ngFor="let item of displayedItems; let i = index"
+        >
+          <mat-card class="example-card" style="margin: 16px">
+            <mat-card-header>
+              <mat-card-title>{{ item.intensifier }}</mat-card-title>
+            </mat-card-header>
+            <img
+              mat-card-image
+              src="https://i.pinimg.com/474x/50/f1/7c/50f17c380525acf16c5ad8df185b1554.jpg"
+              alt="Photo of a Coffee"
+            />
+            <mat-card-content>
+              <p>{{ item.blend_name }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button>{{ item.variety }}</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
       </div>
+      <mat-paginator
+        [length]="totalPages * itemsPerPage"
+        [pageSize]="itemsPerPage"
+        (page)="onPageChange($event)"
+        showFirstLastButtons
+      ></mat-paginator>
     </div>
-    <mat-paginator [length]="totalPages * itemsPerPage" [pageSize]="itemsPerPage" (page)="onPageChange($event)" showFirstLastButtons></mat-paginator>
-  </div>
+  </ng-template>
 </div>

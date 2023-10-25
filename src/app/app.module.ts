@@ -8,15 +8,17 @@ import { StoreModule } from "@ngrx/store";
 import { MatPaginatorModule } from "@angular/material/paginator";
 
 import { AppComponent } from './app.component';
-import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SkeletonComponent } from './skeleton/skeleton.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent
+    ProductDetailComponent,
+    SkeletonComponent
   ],
   imports: [
     BrowserModule,
