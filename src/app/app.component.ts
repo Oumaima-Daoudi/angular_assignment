@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   currentPage = 0;
   itemsPerPage = 10;
   totalPages: number = 0;
-  isLoading: boolean = true;
+  isLoading: boolean = false;
 
   constructor(private coffeeService: CoffeeService) {}
   ngOnInit(): void {
@@ -27,15 +27,18 @@ export class AppComponent implements OnInit {
     console.log(this.randomData);
   }
   fetchRandomData(count: number, page: number, pageSize: number) {
+    this.isLoading = true;
     this.coffeeService.getAllCoffees(count, page, pageSize).subscribe(
       (response) => {
         this.randomData = response;
         this.isLoading = false;
         console.log(this.randomData);
         this.calculateTotalPages();
+        this.displayedItems = this.getItemsForCurrentPage();
       },
       (error) => {
         console.error(error);
+        this.isLoading = false;
       }
     );
   }
