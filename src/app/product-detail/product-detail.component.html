@@ -1,0 +1,22 @@
+
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>
+    <img
+    mat-card-image
+    src="https://i.pinimg.com/474x/50/f1/7c/50f17c380525acf16c5ad8df185b1554.jpg"
+    alt="Photo of a Coffee"
+  />
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-grid-tile-header>
+           <h1>{{ coffeeData?.blend_name }}</h1>
+    </mat-grid-tile-header>
+    <div class="desc-container">
+      <p>Intensifier : {{ coffeeData?.intensifier }}</p>
+      <p>Notes : {{ coffeeData?.notes }}</p>
+      <p>Origin : {{ coffeeData?.origin }}</p>
+      <p>Variety : {{ coffeeData?.variety }}</p>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+

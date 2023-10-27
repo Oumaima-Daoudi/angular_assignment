@@ -1,0 +1,14 @@
+mat-grid-tile {
+
+}
+
+.desc-container{
+  margin: 0;
+  padding: 0;
+
+}
+.desc-container p{
+  font-size: x-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 6px;
+}
