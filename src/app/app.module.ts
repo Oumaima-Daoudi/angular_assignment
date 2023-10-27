@@ -35,7 +35,7 @@ import { ProductsComponent } from './products/products.component';
     MatPaginatorModule,
     MatGridListModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
     /* StoreModule.forRoot(coffeeReducer),
     StoreModule.forFeature('coffee', coffeeReducer) */
   ],
