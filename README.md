@@ -41,6 +41,6 @@ For those seeking an extra challenge, consider the following:
 ### OnPush ChangeDetection:Implement OnPush ChangeDetection for each component.
 ### Product Details Page:Add a product details page for a more comprehensive user experience.
 # Contributors
-Oumaima Daoudi </br>
-Feel free to reach out if you have any questions or encounter technical issues. Happy coding!
+Oumaima Daoudi
+#### Feel free to reach out if you have any questions or encounter technical issues. Happy coding!
     
