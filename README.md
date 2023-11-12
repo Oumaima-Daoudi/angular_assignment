@@ -13,5 +13,5 @@ To run the project locally, follow these steps:
 2. Navigate to the project directory:
 
      ```bash
-   git clone https://github.com/your-username/angular-assignment.git
+   cd angular-assignment
     
