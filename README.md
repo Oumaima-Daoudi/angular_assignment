@@ -14,4 +14,14 @@ To run the project locally, follow these steps:
 
      ```bash
    cd angular-assignment
+3. Install dependencies:
+
+      ```bash
+   npm install
+4. Run the application:
+
+      ```bash
+   ng serve
+
+The application will be accessible at http://localhost:4200/ in your web browser.
     
