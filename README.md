@@ -1,27 +1,46 @@
-# MyApp
+# Angular Assignment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
+This repository contains the code for an Angular assignment. The project utilizes the Angular CLI and focuses on building a Product List Page, fetching data from an external API, and implementing various Angular features.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To run the project locally, follow these steps:
 
-## Code scaffolding
+1. Clone the repository:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+   ```bash
+   git clone https://github.com/Oumaima-Daoudi/angular-assignment.git
+2. Navigate to the project directory:
 
-## Build
+     ```bash
+   cd angular-assignment
+3. Install dependencies:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+      ```bash
+   npm install
+4. Run the application:
 
-## Running unit tests
+      ```bash
+   ng serve
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The application will be accessible at http://localhost:4200/ in your web browser.
 
-## Running end-to-end tests
+# Base Assignment
+The base assignment focuses on creating a Product List Page. Follow the instructions below to complete the base requirements:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Use the Angular CLI to generate a new project and install dependencies.
+Implement a simple HTTP request to retrieve data.
+Implement styling for a presentable UI.
+Ensure the layout is responsive with mobile and desktop breakpoints.
+## Product List Page
+Create a page that retrieves a list of 50 coffee items from the Random Data API and displays them. Implement pagination with a limit of 10 items per page.
 
-## Further help
+# Bonus Challenges
+For those seeking an extra challenge, consider the following:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### OnPush ChangeDetection:Implement OnPush ChangeDetection for each component.
+### Product Details Page:Add a product details page for a more comprehensive user experience.
+# Contributors
+Oumaima Daoudi </br>
+Feel free to reach out if you have any questions or encounter technical issues. Happy coding!
+    
